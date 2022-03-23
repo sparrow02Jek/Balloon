@@ -1,25 +1,22 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class BubbleBehaviour : MonoBehaviour
 {
+    private Bonus _bonusManager;
     
-    void Start()
+    private void Start()
     {
-        
-    }
-
-    void Update()
-    {
-        
+        _bonusManager = FindObjectOfType<Bonus>();
     }
 
     public void OnCollisionEnter2D(Collision2D collision)
     {
         if(collision.collider.tag == "Player")
         {
-            BonusScripts._score += 1;
+            _bonusManager.AddScore();
         }
     }
 }

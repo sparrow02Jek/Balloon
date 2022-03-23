@@ -18,10 +18,6 @@ public class DayAndNightController : MonoBehaviour
 
     void Update()
     {
-        if(BonusScripts._score > 3)
-        {
-            asd();
-        }
     }
 
     void asd()
